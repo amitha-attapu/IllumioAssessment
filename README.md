@@ -12,7 +12,7 @@ The output is saved to a file named `output.txt`.
 - **Log File Structure**: The flow log file is assumed to be structured as space-separated text, with no commas or headers. The `dstport` and `protocol` fields are the 6th and 7th indexes (0-based).
 - **Protocol Mapping**: The program maps protocol numbers to their respective protocol names using a predefined list. If a protocol is not found in the predefined list, it defaults to **"unknown"**. 
    The predefined list used is:
-   ```
+```
 1: icmp (Internet Control Message Protocol)
 6: tcp (Transmission Control Protocol)
 17: udp (User Datagram Protocol)
