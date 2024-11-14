@@ -83,7 +83,6 @@ Port,Protocol,Count
 ```
 ## Testing
 For testing, the program was run with the log file and lookup table provided in the assessment. The output was generated was the above output, based on the provided sample files. 
-- The log file (`logs.txt`) and lookup table (`lookup.txt`) used for testing have been uploaded and are the same as the files referenced in the assessment.
 
 
 ### Edge Cases Handled:
@@ -92,3 +91,6 @@ For testing, the program was run with the log file and lookup table provided in 
 - **Empty Lines**: Any empty lines in the input files are ignored.
 - **Default Tag**: If a tag is not found for a given dstport/protocol combination, the program defaults the tag to "Untagged".
 - **Exceptions**: Any exceptions encountered during processing are printed for easier debugging and tracing of issues.
+
+### Files Provided:
+- The log file (`logs.txt`) and lookup table (`lookup.txt`) used for testing have been uploaded and are the same as the files referenced in the assessment.
