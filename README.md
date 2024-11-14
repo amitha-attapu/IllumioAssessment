@@ -97,11 +97,15 @@ dstport,protocol,tag
 ```
 ### Expected Output (output.txt)
 ```
-Tag Counts: sv_P2,1
+Tag Counts:
+Tag,Count 
+sv_P2,1
 sv_P1,1
 Untagged,0
 
-Port/Protocol Combination Counts: 443,tcp,1
+Port/Protocol Combination Counts:
+Port,Protocol,Count
+443,tcp,1
 23,tcp,1
 ```
 ### Edge Cases Handled:
