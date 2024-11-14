@@ -10,9 +10,23 @@ The output is saved to a file named `output.txt`.
 ## Assumptions
 - **Log Format**: The program only supports the default flow log format version 2, as described in the assessment. Custom formats or other versions are not supported.
 - **Log File Structure**: The flow log file is assumed to be structured as space-separated text, with no commas or headers. The `dstport` and `protocol` fields are the 6th and 7th indexes (0-based).
-- **Protocol Mapping**: The program maps protocol numbers to their respective protocol names using a predefined list. If a protocol is not found in the predefined list, it defaults to "unknown".
+- **Protocol Mapping**: The program maps protocol numbers to their respective protocol names using a predefined list. If a protocol is not found in the predefined list, it defaults to **"unknown"**. 
+   The predefined list used is:
+   ```
+   - **1**: icmp (Internet Control Message Protocol)
+- **6**: tcp (Transmission Control Protocol)
+- **17**: udp (User Datagram Protocol)
+- **41**: ipv6 (Internet Protocol version 6 encapsulation)
+- **47**: gre (Generic Routing Encapsulation)
+- **50**: esp (Encapsulating Security Payload)
+- **51**: ah (Authentication Header)
+- **58**: icmpv6 (ICMP for IPv6)
+- **89**: ospf (Open Shortest Path First)
+
+```
+
 - **Lookup File**: The lookup table is assumed to be a CSV file with headers (`dstport`, `protocol`, `tag`) and no extra spaces or invalid characters.
-- **Case Insensitivity**: Matches for port and protocol in the lookup table are case-insensitive.
+- **Case Insensitivity**: Case insensitivity was considered, but this issue did not arise, as ports were numeric and protocols were mapped from numbers using a default mapping.
 - **Output File**: Both the tag count and the port/protocol combination count are written to a single output file (`output.txt`).
 - **Default Tag**: If a tag is not found in the lookup table for a specific `dstport`/`protocol` combination, it defaults to "Untagged".
 - **Lookup Key Format**: The combination of `dstport` and `protocol` is treated as a key in the form of `dstport_protocol` in the lookup table.
