@@ -29,16 +29,17 @@ Compile the Java program:
 ```
 javac Illumio.java
 ```
-Run the program, ensuring you provide the correct paths for the lookup and log files:
+### Run the program, ensuring you provide the correct paths for the lookup and log files:
 
 ```
 java Illumio
 ```
-Input Files
-Lookup Table: A CSV file with the format dstport,protocol,tag.
-Log File: A plain text file containing the flow logs in the format specified in the assessment.
-Output
-The output will be written to a file called output.txt in the following format:
+### Input Files
+- **Lookup Table: A CSV file with the format dstport,protocol,tag.
+- **Log File: A plain text file containing the flow logs in the format specified in the assessment.
+- **Output
+
+## The output will be written to a file called output.txt in the following format:
 
 ```
 Tag Counts:
