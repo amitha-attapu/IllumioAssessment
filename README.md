@@ -27,9 +27,9 @@ javac Illumio.java
 ```
 Run the program, ensuring you provide the correct paths for the lookup and log files:
 
-bash
-Copy code
+```
 java Illumio
+```
 Input Files
 Lookup Table: A CSV file with the format dstport,protocol,tag.
 Log File: A plain text file containing the flow logs in the format specified in the assessment.
