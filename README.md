@@ -22,7 +22,6 @@ The output is saved to a file named `output.txt`.
 81: vmtp (Versatile Message Transport Protocol)  
 89: ospfigp (Open Shortest Path First Interior Gateway Protocol)  
 91: larp (Link Access Protocol)
-
 ```
 
 
@@ -52,9 +51,10 @@ java Illumio
 ### Input Files
 - **Lookup Table: A CSV file with the format dstport,protocol,tag.
 - **Log File: A plain text file containing the flow logs in the format specified in the assessment.
-- **Output
 
-## The output will be written to a file called output.txt in the following format:
+## Output
+
+** The output will be written to a file called output.txt in the following format:
 
 ```
 Tag Counts:
