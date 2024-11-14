@@ -81,34 +81,13 @@ Port,Protocol,Count
 49158,tcp,1
 49156,tcp,1
 ```
+## Testing
+For testing, the program was run with the log file and lookup table provided in the assessment. The output was generated was the above output, based on the provided sample files. 
 
-Testing
-Example Test
-Use the following sample log file (logs.txt):
 
-Copy code
-2 123456789012 eni-0a1b2c3d 10.0.1.201 198.51.100.2 443 49153 6 25 20000 1620140761 1620140821 ACCEPT OK
-2 123456789012 eni-4d3c2b1a 192.168.1.100 203.0.113.101 23 49154 6 15 12000 1620140761 1620140821 REJECT OK
-Use the following sample lookup table (lookup.txt):
-
-swift
-Copy code
-dstport,protocol,tag
-443,tcp,sv_P2
-23,tcp,sv_P1
-Expected output (output.txt):
-
-mathematica
-Copy code
-Tag Counts:
-sv_P2,1
-sv_P1,1
-Untagged,0
-
-Port/Protocol Combination Counts:
-443,tcp,1
-23,tcp,1
-Edge Cases
-Malformed Lines: Lines in both the lookup and log files that do not meet the expected format will be skipped with a warning message.
-Missing Protocol: If a protocol number is not in the predefined mapping, it will be treated as "unknown".
-Empty Lines: Empty lines in the input files will be ignored.
+### Edge Cases Handled:
+- **Malformed Lines**: Lines that do not meet the expected format in either the log or lookup table are skipped, with a warning message displayed.
+- **Missing Protocol**: If a protocol number is not found in the predefined mapping, it is treated as "unknown".
+- **Empty Lines**: Any empty lines in the input files are ignored.
+- **Default Tag**: If a tag is not found for a given dstport/protocol combination, the program defaults the tag to "Untagged".
+- **Exceptions**: Any exceptions encountered during processing are printed for easier debugging and tracing of issues.
