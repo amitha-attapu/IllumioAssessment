@@ -1,4 +1,4 @@
-# Illumio Technical Assessment - Flow Log Tagging Program
+# Illumio Technical Assessment - Adding flow Log tags
 
 ## Description
 This program processes a flow log file, parses each row, and maps it to a tag based on a lookup table. The lookup table is provided in a CSV file containing three columns: `dstport`, `protocol`, and `tag`. The program reads both the lookup table and the flow log file, performs the mapping, and generates two outputs:
