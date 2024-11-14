@@ -36,24 +36,32 @@ Log File: A plain text file containing the flow logs in the format specified in 
 Output
 The output will be written to a file called output.txt in the following format:
 
-Tag Counts:
-mathematica
-Copy code
+```
 Tag Counts:
 Tag,Count
 sv_P2,1
 sv_P1,2
-email,3
-Untagged,9
-Port/Protocol Combination Counts:
-mathematica
-Copy code
+email,4
+Untagged,8
+
 Port/Protocol Combination Counts:
 Port,Protocol,Count
-22,tcp,1
-23,tcp,1
-25,tcp,1
+1024,tcp,1
+49153,tcp,1
+49155,tcp,1
 443,tcp,1
+23,tcp,1
+49157,tcp,1
+25,tcp,1
+110,tcp,1
+993,tcp,1
+49154,tcp,1
+80,tcp,1
+143,tcp,2
+49158,tcp,1
+49156,tcp,1
+```
+
 Testing
 Example Test
 Use the following sample log file (logs.txt):
