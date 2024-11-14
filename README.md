@@ -1,25 +1,29 @@
 # Illumio Technical Assessment - Flow Log Tagging Program
-Description
-This program processes a flow log file, parses each row, and maps it to a tag based on a lookup table. The lookup table is provided in a CSV file, and it contains three columns: dstport, protocol, and tag. The program reads both the lookup table and the flow log file, performs the mapping, and generates two outputs:
 
-A count of matches for each tag.
-A count of matches for each port/protocol combination.
-The output is saved to a file named output.txt.
+## Description
+This program processes a flow log file, parses each row, and maps it to a tag based on a lookup table. The lookup table is provided in a CSV file containing three columns: `dstport`, `protocol`, and `tag`. The program reads both the lookup table and the flow log file, performs the mapping, and generates two outputs:
+- A count of matches for each tag.
+- A count of matches for each port/protocol combination.
 
-Assumptions
-Log Format: The program only supports the default flow log format version 2, as described in the assessment . Any custom formats or other versions are not supported.
-Log File Structure: It is assumed that the flow log file is structured as space-separated text, with no commas or headers, and the dstport and protocol fields are the 6th and 7th indexes (0-based).
-Protocol Mapping: The program maps protocol numbers to their respective protocol names using a predefined list. If a protocol is not found in the predefined list, it defaults to "unknown".
-Lookup File: The lookup table is assumed to be a CSV file with headers (dstport,protocol,tag) and no extra spaces or invalid characters.
-Case Insensitivity: The matches for port and protocol in the lookup table are case-insensitive.
-Output File: Both the tag count and the port/protocol combination count are written to a single output file (output.txt).
-Default Tag: If a tag is not found in the lookup table for a specific dstport/protocol combination, it defaults to "Untagged".
-Lookup Key Format: The combination of dstport and protocol is treated as a key in the form of dstport_protocol in the lookup table.
-How to Run
-Prerequisites
-Java Development Kit (JDK) 8 or higher.
-Ensure the paths to the log file and lookup table are correctly set in the main method.
-Running the Program
+The output is saved to a file named `output.txt`.
+
+## Assumptions
+- **Log Format**: The program only supports the default flow log format version 2, as described in the assessment. Custom formats or other versions are not supported.
+- **Log File Structure**: The flow log file is assumed to be structured as space-separated text, with no commas or headers. The `dstport` and `protocol` fields are the 6th and 7th indexes (0-based).
+- **Protocol Mapping**: The program maps protocol numbers to their respective protocol names using a predefined list. If a protocol is not found in the predefined list, it defaults to "unknown".
+- **Lookup File**: The lookup table is assumed to be a CSV file with headers (`dstport`, `protocol`, `tag`) and no extra spaces or invalid characters.
+- **Case Insensitivity**: Matches for port and protocol in the lookup table are case-insensitive.
+- **Output File**: Both the tag count and the port/protocol combination count are written to a single output file (`output.txt`).
+- **Default Tag**: If a tag is not found in the lookup table for a specific `dstport`/`protocol` combination, it defaults to "Untagged".
+- **Lookup Key Format**: The combination of `dstport` and `protocol` is treated as a key in the form of `dstport_protocol` in the lookup table.
+
+## How to Run
+
+### Prerequisites
+- Java Development Kit (JDK) 8 or higher.
+- Ensure the paths to the log file and lookup table are correctly set in the main method.
+
+### Running the Program
 Compile the Java program:
 
 ```
