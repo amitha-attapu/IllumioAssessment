@@ -13,15 +13,16 @@ The output is saved to a file named `output.txt`.
 - **Protocol Mapping**: The program maps protocol numbers to their respective protocol names using a predefined list. If a protocol is not found in the predefined list, it defaults to **"unknown"**. 
    The predefined list used is:
 ```
-**1**: icmp (Internet Control Message Protocol)  
-**6**: tcp (Transmission Control Protocol)  
-**17**: udp (User Datagram Protocol)  
-**41**: ipv6 (Internet Protocol version 6 encapsulation)  
-**50**: esp (Encapsulating Security Payload)  
-**58**: ipv6-icmp (ICMP for IPv6)  
-**81**: vmtp (Versatile Message Transport Protocol)  
-**89**: ospfigp (Open Shortest Path First Interior Gateway Protocol)  
-**91**: larp (Link Access Protocol)
+1: icmp (Internet Control Message Protocol)  
+6: tcp (Transmission Control Protocol)  
+17: udp (User Datagram Protocol)  
+41: ipv6 (Internet Protocol version 6 encapsulation)  
+50: esp (Encapsulating Security Payload)  
+58: ipv6-icmp (ICMP for IPv6)  
+81: vmtp (Versatile Message Transport Protocol)  
+89: ospfigp (Open Shortest Path First Interior Gateway Protocol)  
+91: larp (Link Access Protocol)
+
 ```
 
 
