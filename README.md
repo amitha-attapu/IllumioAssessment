@@ -7,7 +7,7 @@ A count of matches for each port/protocol combination.
 The output is saved to a file named output.txt.
 
 Assumptions
-Log Format: The program only supports the default flow log format version 2, as described in the assessment (sample provided). Any custom formats or other versions are not supported.
+Log Format: The program only supports the default flow log format version 2, as described in the assessment . Any custom formats or other versions are not supported.
 Log File Structure: It is assumed that the flow log file is structured as space-separated text, with no commas or headers, and the dstport and protocol fields are the 6th and 7th indexes (0-based).
 Protocol Mapping: The program maps protocol numbers to their respective protocol names using a predefined list. If a protocol is not found in the predefined list, it defaults to "unknown".
 Lookup File: The lookup table is assumed to be a CSV file with headers (dstport,protocol,tag) and no extra spaces or invalid characters.
@@ -22,9 +22,9 @@ Ensure the paths to the log file and lookup table are correctly set in the main 
 Running the Program
 Compile the Java program:
 
-bash
-Copy code
+,,,
 javac Illumio.java
+,,,
 Run the program, ensuring you provide the correct paths for the lookup and log files:
 
 bash
