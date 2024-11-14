@@ -77,14 +77,33 @@ Port,Protocol,Count
 993,tcp,1
 49154,tcp,1
 80,tcp,1
-143,tcp,2
+143,tcp,1
 49158,tcp,1
 49156,tcp,1
 ```
 ## Testing
 For testing, the program was run with the log file and lookup table provided in the assessment. The output was generated was the above output, based on the provided sample files. 
 
+### Sample Log File (logs.txt)
+```
+2 123456789012 eni-0a1b2c3d 10.0.1.201 198.51.100.2 443 49153 6 25 20000 1620140761 1620140821 ACCEPT OK
+2 123456789012 eni-4d3c2b1a 192.168.1.100 203.0.113.101 23 49154 6 15 12000 1620140761 1620140821 REJECT OK
+```
+### Sample Lookup Table (lookup.txt)
+```
+dstport,protocol,tag
+443,tcp,sv_P2
+23,tcp,sv_P1
+```
+### Expected Output (output.txt)
+```
+Tag Counts: sv_P2,1
+sv_P1,1
+Untagged,0
 
+Port/Protocol Combination Counts: 443,tcp,1
+23,tcp,1
+```
 ### Edge Cases Handled:
 - **Malformed Lines**: Lines that do not meet the expected format in either the log or lookup table are skipped, with a warning message displayed.
 - **Missing Protocol**: If a protocol number is not found in the predefined mapping, it is treated as "unknown".
