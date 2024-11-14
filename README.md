@@ -83,6 +83,7 @@ Port,Protocol,Count
 ```
 ## Testing
 For testing, the program was run with the log file and lookup table provided in the assessment. The output was generated was the above output, based on the provided sample files. 
+- The log file (`logs.txt`) and lookup table (`lookup.txt`) used for testing have been uploaded and are the same as the files referenced in the assessment.
 
 
 ### Edge Cases Handled:
