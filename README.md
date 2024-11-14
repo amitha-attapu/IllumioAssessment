@@ -49,12 +49,12 @@ javac Illumio.java
 java Illumio
 ```
 ### Input Files
-- **Lookup Table: A CSV file with the format dstport,protocol,tag.
-- **Log File: A plain text file containing the flow logs in the format specified in the assessment.
+- **Lookup Table**: A CSV file with the format dstport,protocol,tag.
+- **Log File**: A plain text file containing the flow logs in the format specified in the assessment.
 
 ## Output
 
-** The output will be written to a file called output.txt in the following format:
+**The output will be written to a file called output.txt in the following format:**
 
 ```
 Tag Counts:
