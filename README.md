@@ -22,9 +22,9 @@ Ensure the paths to the log file and lookup table are correctly set in the main 
 Running the Program
 Compile the Java program:
 
-,,,
+```
 javac Illumio.java
-,,,
+```
 Run the program, ensuring you provide the correct paths for the lookup and log files:
 
 bash
